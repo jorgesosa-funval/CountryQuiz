@@ -5,6 +5,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily:{
+        'vietnam': "'Be Vietnam Pro', sans-serif"
+    },
     extend: {
       backgroundImage: {
         'main-bg': "url('/bg.jpg')",
@@ -19,7 +22,8 @@ export default {
         'gray-bg':'#8B8EAB',
         'yellow-bg':'#FFECC8'
 
-      }
+      },
+      
     },
   },
   plugins: [],
