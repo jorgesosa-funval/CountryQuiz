@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 export function useQuiz() {
     const [data, setData] = useState();
+    
     let capita = "Cual es la capital de "
     async function getData() {
         const data = await fetch('https://restcountries.com/v3.1/all?fields=name,capital,currencies,translations')
@@ -39,10 +40,6 @@ export function useQuiz() {
             }
 
         }
-
-
-
-
         setData(questions)
     }
 
