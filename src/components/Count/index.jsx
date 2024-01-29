@@ -8,7 +8,7 @@ export default function Count({ data, position }) {
             '>
 
                 {data && data.map((val, i) =>
-                    <li key={val.capital[0]} className={`w-10 h-10 flex items-center justify-center rounded-full ${position === i ? 'bg-button-gradient' : 'bg-buttons-bg'} `}>
+                    <li key={val.capital[0]} className={`w-10 h-10 flex items-center justify-center rounded-full ${position >= i ? 'bg-button-gradient' : 'bg-buttons-bg'} `}>
                         {i + 1}
                     </li>
                 )}

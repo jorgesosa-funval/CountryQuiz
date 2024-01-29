@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Button from './Button'
 
 export default function Question({ data, setPosition, position }) {
-   /* Idea de Rotsen GPT */
+   const [show, setShow] = useState(false);
    return (
       <div className='container flex flex-col items-center'>
          <h2 className='text-lg font-semibold'>Cual es la capital de {data && data[position].name.common} ?</h2>
@@ -13,8 +13,9 @@ export default function Question({ data, setPosition, position }) {
                <Button
                   key={ans}
                   text={ans}
-                  setPosition={setPosition}
-
+                  setPosition={(e) => { setPosition(e), setShow(true) }}
+                  correcta={data[position].capital[0] === ans}
+                  show={show}
                />
             )}
          </div>
