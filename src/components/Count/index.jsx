@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ContextQuiz } from '../../context/Quiz'
 
-export default function Count({ data, position }) {
+
+export default function Count() {
+    const { data, position} = useContext(ContextQuiz)
     return (
         <div className='container flex flex-col items-center py-5'>
             <h2 className='text-gray-bg'>Country Quiz</h2>
